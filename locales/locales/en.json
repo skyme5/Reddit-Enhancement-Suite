@@ -165,6 +165,9 @@
 	"accountSwitcherUnknownError": {
 		"message": "Could not log in as $1 due to an unknown error: $2\n\nCheck your settings?"
 	},
+	"accountSwitcherOTPError": {
+		"message": "Could not log in as $1 due to an invalid one time password.\n\nCheck your settings?"
+	},
 	"accountSwitcherReload": {
 		"message": "reload"
 	},
@@ -2976,9 +2979,6 @@
 	"settingsNavigationShowAllOptionsDesc": {
 		"message": "All options are displayed by default. Uncheck this box if you would like to hide advanced options."
 	},
-	"settingsNavigationShowAllOptionsAlertDesc": {
-		"message": "If a user clicks on a link to an advanced option while advanced options are hidden, should an alert be shown?"
-	},
 	"userTaggerShowTaggingIconDesc": {
 		"message": "Always show a tag tool icon after every username."
 	},
@@ -3210,9 +3210,6 @@
 	},
 	"settingsNavigationShowAllOptionsTitle": {
 		"message": "Show All Options"
-	},
-	"settingsNavigationShowAllOptionsAlertTitle": {
-		"message": "Show All Options Alert"
 	},
 	"selectedEntryAutoSelectOnScrollTitle": {
 		"message": "Auto Select On Scroll"

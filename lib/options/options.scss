@@ -22,6 +22,10 @@ li {
 
 #RESConsoleContainer {
 	background-color: #fff;
+
+	&:not(.advanced-options-enabled) .advanced {
+		display: none;
+	}
 }
 
 .RESDonateButton {
@@ -94,11 +98,6 @@ li {
 	padding-left: 5px;
 	height: calc(100vh - 61px);
 
-	&.advanced-options-disabled .SearchRES-result-item.advanced,
-	&.advanced-options-disabled .optionContainer.advanced {
-		display: none;
-	}
-
 	#contributeContents {
 		padding-top: 15px;
 
@@ -155,7 +154,7 @@ li {
 
 #RESConfigPanelModulesList {
 	color: rgb(80, 80, 80);
-	height: calc(100% - 50px);
+	height: calc(100% - 55px);
 	overflow-y: auto;
 
 	> ul {
@@ -215,11 +214,8 @@ li {
 		display: block;
 	}
 
-	// for when the functionality is there
-	&.depends {
-		margin-top: -11px;
-		border-radius: 0 0 2px 2px;
-		background-color: rgb(251, 252, 255);
+	&.dependsOnDisabledOptions {
+		display: none;
 	}
 
 	&.highlight {
@@ -431,17 +427,6 @@ a.RESConsoleButton {
 	padding: 4px;
 	margin-right: 1em;
 	background-color: #fffacd;
-}
-
-#AboutRESTeamImage {
-	width: 100%;
-	background-color: #000;
-	margin-bottom: 12px;
-
-	img {
-		display: block;
-		margin: auto;
-	}
 }
 
 #SearchRES-results-container {
