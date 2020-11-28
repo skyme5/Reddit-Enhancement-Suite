@@ -1,7 +1,3 @@
-.srOver {
-	outline: 1px dashed black;
-}
-
 .res-subredditManager #sr-header-area {
 	overflow: hidden;
 
@@ -18,7 +14,7 @@
 	left: 0;
 	z-index: 9999;
 	border: 1px solid black;
-	background-color: #FAFAFA;
+	background-color: #fafafa;
 	min-width: 320px;
 	padding: 2px 2px 0 2px;
 	overflow-y: auto;
@@ -135,13 +131,6 @@
 		width: 270px;
 	}
 
-	// Fix a Firefox alignment quirk with -moz-focus-inner
-	#sortButton::-moz-focus-inner,
-	#shortcut-subreddit::-moz-focus-inner {
-		border: none;
-		padding: 0;
-	}
-
 	[name=shortcut-save] {
 		float: right;
 	}
@@ -172,7 +161,7 @@
 #RESSubredditGroupDropdown {
 	position: absolute;
 	z-index: 99999;
-	background-color: #F0F0F0;
+	background-color: #f0f0f0;
 	border: 1px solid black;
 	border-top-width: 0;
 	font: 12px/1.5 verdana, sans-serif;
@@ -253,7 +242,7 @@
 #RESShortcutsAdd {
 	width: 16px;
 	cursor: pointer;
-	background: #F0F0F0;
+	background: #f0f0f0;
 	font-size: 20px;
 	color: #369;
 	height: 18px;
@@ -328,11 +317,6 @@
 	&::before {
 		content: '\F155';
 		font-family: 'Batch';
-	}
-
-	&.srOver {
-		outline: none;
-		border-color: rgb(200, 50, 50);
 	}
 }
 

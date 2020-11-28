@@ -165,6 +165,9 @@
 	"accountSwitcherUnknownError": {
 		"message": "Could not log in as $1 due to an unknown error: $2\n\nCheck your settings?"
 	},
+	"accountSwitcherOTPError": {
+		"message": "Could not log in as $1 due to an invalid one time password.\n\nCheck your settings?"
+	},
 	"accountSwitcherReload": {
 		"message": "reload"
 	},
@@ -233,6 +236,18 @@
 	},
 	"commentNavigatorShowByDefaultDesc": {
 		"message": "Display Comment Navigator by default."
+	},
+	"commentNavigatorShowOnKeyboardMoveTitle": {
+		"message": "Show On Keyboard Move"
+	},
+	"commentNavigatorShowOnKeyboardMoveDesc": {
+		"message": "Display the comment navigator interface when using the keyboard shortcuts (Shift + ↓ or Shift + ↑) to navigate."
+	},
+	"commentNavigatorSkipReadCommentsTitle": {
+		"message": "Skip Read Comments"
+	},
+	"commentNavigatorSkipReadCommentsDesc": {
+		"message": "Prevents navigating to already read comments."
 	},
 	"commentNavigatorOpenOnHighlightUserTitle": {
 		"message": "Open On Highlight User"
@@ -1824,6 +1839,18 @@
 	"backupAndRestoreWarnBeforeAutomaticRestoreTitle": {
 		"message": "Warn Before Automatic Restore"
 	},
+	"backupAndRestoreAutomaticRestoreDesc": {
+		"message": "Should RES automatically restore a newer backup (e.g. from another computer) when available?"
+	},
+	"backupAndRestoreAutomaticRestoreTitle": {
+		"message": "Automatic Restore"
+	},
+	"backupAndRestoreSyncFrequencyDesc": {
+		"message": "How often (in hours) should RES update its backup?"
+	},
+	"backupAndRestoreSyncFrequencyTitle": {
+		"message": "Sync Frequency"
+	},
 	"backupAndRestoreWarnBeforeAutomaticRestoreDesc": {
 		"message": "Before automatically restoring a backup, should a popup ask for confirmation?\n\nWarning: if this option is disabled and something goes wrong, your settings may be silently deleted. Use at your own risk."
 	},
@@ -2003,6 +2030,12 @@
 	},
 	"betteRedditCommentCollapseInInboxDesc": {
 		"message": "Show the [-] collapse button in the inbox."
+	},
+	"betteRedditBlankPageUntilMeaningfulContentTitle": {
+		"message": "Blank Page Until Meaningful Content"
+	},
+	"betteRedditBlankPageUntilMeaningfulContentDesc": {
+		"message": "May improve performance by not rendering Reddit while meaningful content has yet to be loaded."
 	},
 	"betteRedditRestrictScrollEventsTitle": {
 		"message": "Restrict Scroll Events"
@@ -2359,13 +2392,13 @@
 		"message": "Users Match Action"
 	},
 	"filteRedditUsersMatchActionDesc": {
-		"message": "When filtering users in the above list, how should they be ignored?\n\n**Hidden**: Hide all links, and hide comments unless they have visible replies, in which case fade and reduce its size.\n\n**Replaced with placeholder**: Display a placeholder which can be clicked on to display the post's original content."
+		"message": "When filtering users in the above list, how should they be ignored?\n\n**Hidden**: Hide all links and comments.\n\n**Replaced with placeholder**: Display a placeholder which can be clicked on to display the post's original content."
 	},
 	"filteRedditUsersMatchRepliesActionTitle": {
 		"message": "Users Match Replies Action"
 	},
 	"filteRedditUsersMatchRepliesActionDesc": {
-		"message": "What should be done to replies of filtered comments?"
+		"message": "What should be done to filtered comments which has replies?\n\n**Kept visible**: Show replies normally, but fade and shrink the filtered comment.\n\n**Collapsed**: Like _kept visible_, but collapse the filtered comment.\n\n**Hidden**: Hide both the filtered comment and its replies."
 	},
 	"filteRedditNSFWfilterTitle": {
 		"message": "NSFW Filter"
@@ -2450,6 +2483,18 @@
 	},
 	"filteRedditFlairDesc": {
 		"message": "Hide posts where certain keywords are in the post's link flair."
+	},
+	"filteRedditCommentContentTitle": {
+		"message": "Comment Content"
+	},
+	"filteRedditCommentContentDesc": {
+		"message": "Hide comments containing certain keywords.\n\nAdvanced examples:\n\n`/^/?r/w$/s` hides comments which only links to a subreddit\n\n`/(?=^.{0,40}$)(?=.*cake day.*)/is` hides short comment (at most 40 characters) that contains `cake day`"
+	},
+	"filteRedditCommentContentHideRepliesTitle": {
+		"message": "Comment Content Hide Replies"
+	},
+	"filteRedditCommentContentHideRepliesDesc": {
+		"message": "When disabled, matching comments are completely hidden only when they don't have any replies."
 	},
 	"filteRedditUsername": {
 		"message": "Username"
@@ -2567,12 +2612,6 @@
 	},
 	"toggleOff": {
 		"message": "off"
-	},
-	"subredditStyleToggleRedditPrefsMessage": {
-		"message": "RES allows you to disable specific subreddit styles!"
-	},
-	"subredditStyleToggleClickToLearnMore": {
-		"message": "Click here to learn more"
 	},
 	"subredditStyleToggleUse": {
 		"message": "Use subreddit style"
@@ -2940,9 +2979,6 @@
 	"settingsNavigationShowAllOptionsDesc": {
 		"message": "All options are displayed by default. Uncheck this box if you would like to hide advanced options."
 	},
-	"settingsNavigationShowAllOptionsAlertDesc": {
-		"message": "If a user clicks on a link to an advanced option while advanced options are hidden, should an alert be shown?"
-	},
 	"userTaggerShowTaggingIconDesc": {
 		"message": "Always show a tag tool icon after every username."
 	},
@@ -3174,9 +3210,6 @@
 	},
 	"settingsNavigationShowAllOptionsTitle": {
 		"message": "Show All Options"
-	},
-	"settingsNavigationShowAllOptionsAlertTitle": {
-		"message": "Show All Options Alert"
 	},
 	"selectedEntryAutoSelectOnScrollTitle": {
 		"message": "Auto Select On Scroll"
@@ -4018,12 +4051,6 @@
 	"subredditManagerStoreSubredditVisitIncognitoDesc": {
 		"message": "Store the last time you visited a subreddit in incognito/private mode."
 	},
-	"subredditManagerDragDropDeleteTitle": {
-		"message": "Drag Drop Delete"
-	},
-	"subredditManagerDragDropDeleteDesc": {
-		"message": "Show a trash bin while dragging subreddit shortcuts."
-	},
 	"subredditManagerDisplayMultiCountsTitle": {
 		"message": "Display Multi Counts"
 	},
@@ -4336,11 +4363,17 @@
 	"temporaryDropdownLinksTemporarily": {
 		"message": "(temporarily?)"
 	},
-	"showImagesReplaceNativeExpandoTitle": {
-		"message": "Replace Native Expando"
+	"showImagesForceReplaceNativeExpandoTitle": {
+		"message": "Force Replace Native Expando"
 	},
-	"showImagesReplaceNativeExpandoDesc": {
-		"message": "Should RES also attempt to replace Reddit's expando?"
+	"showImagesForceReplaceNativeExpandoDesc": {
+		"message": "Always replace Reddit's player."
+	},
+	"showImagesVredditMinimumVideoBandwidthTitle": {
+		"message": "Minimum Video Bandwidth"
+	},
+	"showImagesVredditMinimumVideoBandwidthDesc": {
+		"message": "The lowest video quality (in kB/s) the adaptive player shall use."
 	},
 	"imgurPreferResAlbumsTitle": {
 		"message": "Prefer RES Albums"

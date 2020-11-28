@@ -1,5 +1,11 @@
 module.exports = {
 	'selecting on comments page': browser => {
+		if (browser.options.desiredCapabilities.browserName === 'firefox') {
+			// Firefox 79.0a seemingly has a bug which prevents RES initializing during the test
+			browser.end();
+			return;
+		}
+
 		const selectedClass = 'RES-keyNav-activeThing';
 		const parentPost = '#thing_t3_5lfy0v';
 		const stickiedComment = '#thing_t1_dbvc8xr';
@@ -23,6 +29,7 @@ module.exports = {
 			// Disable neverEndigComments, as that may auto click the "load more comments" buttons
 			.url('https://en.reddit.com/wiki/pages#res:settings-redirect-standalone-options-page/neverEndingComments')
 			.click('.moduleToggle')
+			.pause(500) // Wait a little before navigating away from the settingsConsole, in case this doesn't save immediatly
 
 			// Run the actual test...
 			.url('https://en.reddit.com/r/RESIntegrationTests/comments/5lfy0v/selected_entry_selecting_comments/?limit=1')
